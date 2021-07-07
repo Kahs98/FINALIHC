@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Agronomist</title>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Productos Agroindustriales');
+        data.addColumn('number', 'Toneladas de litros');
+        data.addRows([
+          ['Fertilizantes',  {v: 10000, f: '80'}],
+          ['Insectidas',   {v:8000,   f: '65'}],
+          ['Fungicidas', {v: 12500, f: '45'}],
+          ['Fitorreguladores',   {v: 7000,  f: '20'}],
+          ['Otros',   {v: 7000,  f: '10'}]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Fertilizantes',  {v: 10000, f: '80'}],
+          ['Insectidas',   {v:8000,   f: '65'}],
+          ['Fungicidas', {v: 12500, f: '45'}],
+          ['Fitorreguladores',   {v: 7000,  f: '20'}],
+          ['Otros',   {v: 7000,  f: '10'}]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Productos Agroquimicos vendidos-20201 by Type',
+          'width':400,
+          'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+
+<body>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="nav-main">
+      <!-- Brand -->
+      <img src="img/brand.png" alt="TechNews Logo" class="nav-brand">
+      <!-- Left Nav -->
+      <ul class="nav-menu">
+        <li>
+          <a href="#">VIRTUAL AGRONOMIST</a>
+        </li>
+      </ul>
+
+      <!-- Right Nav -->
+      <ul class="nav-menu-right">
+        <li>
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <br>
+
+    <!-- SHOWCASE -->
+    <header class="showcase">
+      <h2>VIRTUAL AGRONOMIST</h2>
+      <p>La alimentación y la agricultura son el frente y la espalda de un mismo cuerpo</p>
+      <a href="#" class="btn">
+        BIENVENIDO<i class="fas fa-chevron-right"></i>
+      </a>
+    </header>
+
+    <!-- Card Banner 1-->
+    <section class="cards-banner-one">
+      <div class="content">
+        <h2>Asesoría para Agricultores
+        </h2>
+        <p>Para los agricultores que desean mejorar sus prácticas de gestión
+          agrícola se considerab</p>
+        <a href="#" class="btn">Ver más<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- NEWS CARDS -->
+    <div class="news-cards">
+      <div>
+        <img src="img/A2%20Kep.jpg" alt="" />
+        <h3>Agrupacion de registros de las dimensiones de sus terrenos de cultivo</h3>
+        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/A3%20Kep.jpg" alt="" />
+        <h3>Agrupación de los datos de la
+          ubicación de sus tierras como son altitud, latitud y longitud.</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/A4%20Kep.jpg" alt="" />
+        <h3>Asesoría sobre técnicas de cultivo y tratamiento de los suelos</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/A5%20Kep.jpg" alt="" />
+        <h3>Asesoría para evitar que se desarrollen plagas o enfermedades</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
+    <section class="cards-banner-one">
+      <div class="content">
+        <h2>Asesoría para Cooperativas
+        <p>Organizar a los agricultores en una cooperativa suele ser una tarea
+          complicada que requiere mucho tiempo</p>
+        <a href="#" class="btn">Ver más<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <div class="news-cards">
+      <div>
+        <img src="img/D18%20Kep.jpg" alt="" />
+        <h3>Registro central de todos los agricultores en la cooperativa, considerando los registros
+          individuales de sus tierras</h3>
+        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/D19%20Kep.jpg" alt="" />
+        <h3>Planificación y supervisión de la producción por agricultor, cultivo y sembradío</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/D20%20Kep.jpg" alt="" />
+        <h3>Programación de seminarios de temas agrícolas</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/C14%20Kep.jpg" alt="" />
+        <h3>Brinde asesorías sobre temas contables, financieros y de comercialización de sus
+          productos en los mercados nacional y extranjeros.
+        </h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
+    <!-- third card -->
+    <section class="cards-banner-one">
+      <div class="content">
+        <h2>Asesoría para Corporativo
+          <p>Orientado para agricultores avanzados que requieren:</p>
+          <a href="#" class="btn">Ver más<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+    <div class="news-cards">
+      <div>
+        <img src="img/B6%20Kep.jpg" alt="" />
+        <h3>Gestión de información en tiempo real de la evolución diaria de sus cultivos y actividades
+          de los operarios de campo</h3>
+        <a href="#">Learn More <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/B7%20Kep.jpg" alt="" />
+        <h3>Controle sus ventas, gastos y el flujo de efectivo para no perjudicar sus finanzas</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/B8%20Kep.jpg" alt="" />
+        <h3>Generación de informes automatizados para ISO 9001, Global GAP, HACCP y otras
+          normas.</h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+      <div>
+        <img src="img/B9%20Kep.jpg" alt="" />
+        <h3>Integración con maquinaria, equipamiento y sensores para automatizar la recopilación de
+          datos.
+        </h3>
+        <a href="#">Ver más <i class="fas fa-angle-double-right"></i></a>
+      </div>
+    </div>
+    <!-- third card -->
+    <section class="cards-banner-one">
+      <div class="content">
+        <h2>Venta de materiales e insumos agrícolas
+          <p>Servicio especializado en la adquisición de productos
+            nacionales e internacionales para la atención de los pedidos de venta de los agricultores</p>
+          <a href="#" class="btn">Ver más<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+    <div id="table_div"></div>
+    <div id="chart_div"></div>
+    <br>
+
+
+    <!-- third card -->
+    <section class="cards-banner-one">
+      <div class="content">
+        <h2>Se parte de nosotros
+          <p>Organizar a los agricultores en una cooperativa suele ser una tarea
+            complicada que requiere mucho tiempo</p>
+          <a href="#" class="btn">Ver más<i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+
+  </div>
+    <!-- Follow -->
+    <section class="social">
+      <p>Follow TechNews</p>
+      <div class="links">
+        <a href="https://facebook.com">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://linkdin.com">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Links -->
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>Virtual Agronomist Copyright</h3>
+  </footer>
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
